@@ -1,3 +1,8 @@
+<html>
+<head>
+  <title>PostComment</title>
+</head>
+<body>
 <h3>Recent comments on <a href="<%= @article.permalink %>"><%= @article.title %></a></h3>
 
 <ul>
@@ -5,3 +10,7 @@
   <li><strong><%= comment.author %></strong>: <%= comment.content%></li>
 <% end %>
 </ul>
+<p>Brought to you by <a href="https://github.com/dwillis/post_haste">PostHaste</a> and <a href="http://www.heroku.com/">Heroku</a>.</p>
+
+</body>
+</html>
