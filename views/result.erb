@@ -1,0 +1,7 @@
+<h3>Recent comments on <a href="<%= @article.permalink %>"><%= @article.title %></a></h3>
+
+<ul>
+<% @article.comments.each do |comment| %>
+  <li><strong><%= comment.author %></strong>: <%= comment.content%></li>
+<% end %>
+</ul>
