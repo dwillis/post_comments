@@ -8,6 +8,11 @@ end
 
 post '/result' do
   @url = params[:url]
-  @article = @article = Article.create_from_url(@url)
+  redirect "/show?url=#{@url}"
+end
+
+get '/show' do
+  @url = params[:url]
+  @article = Article.create_from_url(@url)
   erb :result
 end
