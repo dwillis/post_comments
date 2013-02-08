@@ -4,7 +4,7 @@ GEM
     json (1.7.6)
     post_haste (0.9)
       json
-    rack (1.5.1)
+    rack (1.4.5)
     rack-protection (1.3.2)
       rack
     sinatra (1.3.4)
@@ -18,4 +18,5 @@ PLATFORMS
 
 DEPENDENCIES
   post_haste (~> 0.9)
+  rack (~> 1.4.5)
   sinatra
