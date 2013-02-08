@@ -5,7 +5,7 @@
 <body>
 <h3>Recent comments on <a href="<%= @article.permalink %>"><%= @article.title %></a></h3>
 
-<table border=1>
+<table class="table table-striped">
 <th>Commenter</th><th>Status</th><th>Comment</th>
 <% @article.comments.each do |comment| %>
   <tr><td><%= comment.author %></td><td><%= comment.status %></td><td><%= comment.content%></td></tr>
