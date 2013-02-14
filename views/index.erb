@@ -10,6 +10,8 @@
   <div><button type="submit" class="btn">Submit</button></div>
 </form>
 
+<p>Bookmarklet: <a href='javascript:(function(){if(window.location.href.match(/^http:\/\/www\.washingtonpost\.com\/[a-zA-Z0-9]/)===null){return;};window.location.href="http://postcomments.herokuapp.com/show?url="+window.location.href;}());' title="PostComment">PostComment</a> (drag to bookmarks bar)</p>
+
 <p>Brought to you by <a href="https://github.com/dwillis/post_haste">PostHaste</a> and <a href="http://www.heroku.com/">Heroku</a>.</p>
 
 </body>
