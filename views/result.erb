@@ -5,6 +5,8 @@
 <body>
 <h3>Recent comments on <a href="<%= @article.permalink %>"><%= @article.title %></a></h3>
 
+<h5>Comments highlighted in light blue mention new Post owner Jeff Bezos</h5>
+
 <table class="table table-striped">
 <th>Commenter</th><th>Status</th><th>Comment</th>
 <% @article.comments.each do |comment| %>
