@@ -13,6 +13,6 @@ end
 
 get '/show' do
   @url = params[:url]
-  @article = Article.create_from_url(@url)
+  @article = Article.create_from_url(@url, 50)
   erb :result
 end

@@ -8,7 +8,11 @@
 <table class="table table-striped">
 <th>Commenter</th><th>Status</th><th>Comment</th>
 <% @article.comments.each do |comment| %>
-  <tr><td><%= comment.author %></td><td><%= comment.status %></td><td><%= comment.content%></td></tr>
+  <% if comment.content.include?('Bezos') %>
+    <tr class='info'><td><%= comment.author %></td><td><%= comment.status %></td><td><%= comment.content %></td></tr>
+  <% else %>
+    <tr><td><%= comment.author %></td><td><%= comment.status %></td><td><%= comment.content %></td></tr>
+  <% end %>
 <% end %>
 </table>
 <p>Brought to you by <a href="https://github.com/dwillis/post_haste">PostHaste</a> and <a href="http://www.heroku.com/">Heroku</a>.</p>
