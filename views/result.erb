@@ -11,9 +11,9 @@
 <th></th><th>Commenter</th><th>Status</th><th>Comment</th>
 <% @article.comments.each do |comment| %>
   <% if comment.content.include?('Bezos') %>
-    <tr class='info'><td id="<%= comment.id.gsub('washingtonpost.com/ECHO/item/','') %>"</td><td><%= comment.author %></td><td><%= comment.status %></td><td><%= comment.content %></td></tr>
+    <tr class='info'><td id="<%= comment.id.gsub('http://washingtonpost.com/ECHO/item/','') %>"<a href="#<%= comment.id.gsub('http://washingtonpost.com/ECHO/item/','') %>">#</a></td><td><%= comment.author %></td><td><%= comment.status %></td><td><%= comment.content %></td></tr>
   <% else %>
-    <tr><td id="<%= comment.id %>"></td><td><%= comment.author %></td><td><%= comment.status %></td><td><%= comment.content %></td></tr>
+    <tr><td id="<%= comment.id.gsub('http://washingtonpost.com/ECHO/item/') %>"><a href="#<%= comment.id.gsub('http://washingtonpost.com/ECHO/item/','') %>">#</a></td><td><%= comment.author %></td><td><%= comment.status %></td><td><%= comment.content %></td></tr>
   <% end %>
 <% end %>
 </table>
